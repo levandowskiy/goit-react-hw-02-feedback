@@ -1,10 +1,7 @@
-import { Component } from 'react';
 import { Wrapper } from './FeedbackOptions.styled';
 import PropTypes from 'prop-types';
 
-export class FeedbackOptions extends Component {
-  render() {
-    const { heandlerClick, options } = this.props;
+export function FeedbackOptions({heandlerClick, options}) {
 
     return (
       <Wrapper>
@@ -17,10 +14,9 @@ export class FeedbackOptions extends Component {
         })}
       </Wrapper>
     );
-  }
 }
 
 FeedbackOptions.propTypes = {
-  handleClick: PropTypes.func.isRequired,
+  heandlerClick: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
